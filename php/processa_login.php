@@ -4,8 +4,10 @@ include("conexao.php");
   if(isset($_POST['submit'])){
     $emailconf = $_POST['emailconf'];
     $senhaconf = $_POST['senhaconf'];
+    $c = hash("sha512", $emailconf);
+    $d = hash("sha512", $senhaconf);
 
-    $sql = "SELECT * FROM users WHERE email = '$emailconf' and senha = '$senhaconf'";
+    $sql = "SELECT * FROM users WHERE email = '$c' and senha = '$d'";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     $count = mysqli_num_rows($result);
@@ -19,6 +21,5 @@ include("conexao.php");
     </script>';
 
     }
-
  }  
 ?>

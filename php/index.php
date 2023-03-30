@@ -23,7 +23,7 @@
                 <br/>
 
                 <div> 
-                 <input type = "text" id = "useremail" name = "useremail" placeholder = "Digite seu e-mail...">
+                 <input type = "email" id = "useremail" name = "useremail" placeholder = "Digite seu e-mail..." required>
                 </div>
            
                <br/>
@@ -32,7 +32,7 @@
                <br/>
 
                <div>
-                 <input type = "password" id = "senha" name = "senha" placeholder = "Digite uma senha...">
+                 <input type = "password" id = "senha" name = "senha" placeholder = "Digite uma senha..." required>
                </div>
 
                <br/>
